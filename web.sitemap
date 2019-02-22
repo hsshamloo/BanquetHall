@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Default.aspx" title="صفحه اصلی"  description="توضیحات در مورد وبسایت">
+		<siteMapNode url="~/ChangePassword.aspx" title="تغییر رمز عبور"  description="" />
+		<siteMapNode url="~/ForgetPassWord.aspx" title="فراموشی رمز عبور"  description="" />
+		<siteMapNode url="~/halls.aspx" title="تالار ها"  description="توضیحات در مورد تالار ها">
+			<siteMapNode url="~/ShowHallInformations.aspx" title="معرفی تالار"  description="توضیحات در مورد تالار ها"/>
+		</siteMapNode>
+		<siteMapNode url="~/foods.aspx" title="غذا ها"  description="توضیحات در مورد غذا ها" />
+		<siteMapNode url="~/Costumer/UsersPage.aspx" title="صفحه مشتری"  description="" >
+			<siteMapNode url="~/Costumer/findSuiteableHall.aspx" title="جستجوی تالار"  description="" >
+				<siteMapNode url="~/Costumer/ReserveHall.aspx" title="سفارش تالار"  description="" />
+			</siteMapNode>
+			<siteMapNode url="~/Costumer/FoodReservation.aspx" title="سفارش غذا"  description="" />
+			<siteMapNode url="~/Costumer/NewBillReportForm.aspx" title="فاکتور جدید"  description="" />
+			<siteMapNode url="~/Costumer/ListOfFactorForUser.aspx" title="فاکتور های صادر شده"  description="" />
+			<siteMapNode url="~/Costumer/FinalBill.aspx" title="پرداخت"  description="" />
+			<siteMapNode url="~/Costumer/BillReportForUser.aspx" title="فاکتور نهایی"  description="" />
+			<siteMapNode url="~/Costumer/BrifShowReservesInformation.aspx" title="سفارش انجام شده"  description="" >
+				<siteMapNode url="~/Costumer/CompleteShowReserveInformationForUser.aspx" title="اطلاعات سفارش"  description="" />
+			</siteMapNode>
+
+		</siteMapNode>
+		<siteMapNode url="~/Manager/ManagerPage.aspx" title="صفحه مدیر"  description="" >
+			<siteMapNode url="~/Manager/MessagePage.aspx" title="ارسال و صندوق پیام"  description="" >
+				
+			</siteMapNode>
+
+			<siteMapNode url="~/Manager/RegisterNewHallForm.aspx" title="ثبت تالار جدید"  description="">
+				<siteMapNode url="~/Manager/PhotoUploader.aspx" title="ویرایش تصاویر"  description="" />
+			</siteMapNode>
+			<siteMapNode url="~/Manager/HallInforMationForManage.aspx" title="اطلاعات تالار ها"  description="" />
+			<siteMapNode url="~/Manager/UserReport.aspx" title="اطلاعات کاربران"  description="" >
+				<siteMapNode url="~/Manager/ChangeUserRoleType.aspx" title="تایید کاربری"  description="" />
+				<siteMapNode url="~/Manager/UserInformation.aspx" title="اطلاعات کاربر"  description="" />
+			</siteMapNode>
+			<siteMapNode url="~/Manager/ReportAllReserveInformation.aspx" title="سفارش های انجام شده"  description="" >
+				<siteMapNode url="~/Manager/FinalBillForManager.aspx" title="فاکتور نهایی"  description="" />
+				<siteMapNode url="~/Manager/CompleteShowReserveInformation.aspx" title="اطلاعات سفارش"  description="" />
+				<siteMapNode url="~/Manager/ReprtReserveByEmail.aspx" title="سفارش های بر اساس مشتری"  description="" />
+				<siteMapNode url="~/Manager/ReprtReserveByDate.aspx" title="سفارش های بر اساس تاریخ"  description="" />
+				<siteMapNode url="~/Manager/ReportReserveByHallName.aspx" title="سفارش های بر اساس نام تالار"  description="" />
+				<siteMapNode url="~/Manager/ReportReserveInNearDays.aspx" title="سفارش های پیش رو"  description="" />
+				<siteMapNode url="~/Manager/ReportPendingReserveInfo.aspx" title="سفارش های معلق"  description="" />
+				<siteMapNode url="~/Manager/ReportNewestResevePlacedInfo.aspx" title="جدید ترین سفارش ها"  description="" />
+				
+				</siteMapNode>
+			<siteMapNode url="~/Manager/ReportItemToBuy.aspx" title="اطلاعات کالاهای مورد نیاز"  description="" />
+
+		</siteMapNode>
+		<siteMapNode url="~/Catering/CateringPage.aspx" title="صفحه مدیریت آشپزخانه"  description="">
+			<siteMapNode url="~/Catering/FoodInformationRegisterAndEdit.aspx" title="ثبت خوراک جدید"  description="" />
+			<siteMapNode url="~/Catering/OrderNewItem.aspx" title="سفارش کالا"  description="" />
+			<siteMapNode url="~/Catering/ViewAndEditFoodInformation.aspx" title="مدیریت و ویرایش اطلاعات خوراک ها"  description="" />
+			<siteMapNode url="~/Catering/AllFoodReservationInformation.aspx" title="لیست سفارش های خوراک"  description="" >
+				<siteMapNode url="~/Catering/FoodReservedReport.aspx" title="خوراک های سفارش داده شده"  description="" />
+				<siteMapNode url="~/Catering/FoodReserveInfoInTime.aspx" title="لیست خوراک های سفارش داده شده براساس زمان"  description="" />
+			</siteMapNode>
+			<siteMapNode url="~/Warehouse/MessageForCatering.aspx" title="پیام ها"  description="" />
+			
+
+		</siteMapNode>
+		<siteMapNode url="~/Warehouse/WareHouse.aspx" title="صفحه مدیریت انبار"  description="">
+			<siteMapNode url="~/Warehouse/ListOfItemNeedToBuyForWarehouse.aspx" title="کالاهای مورد نیاز"  description="" />
+			<siteMapNode url="~/Warehouse/RegisterNewItem.aspx" title="ثبت کالای جدید"  description="" />
+			<siteMapNode url="~/Warehouse/ListOfOrder.aspx" title="کالاهای مورد نیاز آشپزخانه"  description="" />
+			<siteMapNode url="~/Warehouse/MessageForWareHouse.aspx" title="پیام ها"  description="" />
+		</siteMapNode>
+		<siteMapNode url="~/RegisterNewUser.aspx" title="ثبت کاربر جدید"  description="صفحه ثبت کاربر جدید" />
+		<siteMapNode url="~/EditUserInformation.aspx" title="ویرایش اطلاعات کاربر"  description="" />
+		<siteMapNode url="~/AllAvailableItemInWareHouse.aspx" title="لیست اقلام موجود در انبار"  description="" />
+		<siteMapNode url="~/ContactUs.aspx" title="تماس با ما"  description="" />
+		
+	</siteMapNode>
+</siteMap>

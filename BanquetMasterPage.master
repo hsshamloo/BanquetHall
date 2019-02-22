@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BanquetMasterPage.master.cs" Inherits="BanquetMasterPage" %>
+<%@ Register Src="~/Controls/LogInControl.ascx" TagName="LogInControl" TagPrefix="uc1" %>
+<%@ Register Src="~/Controls/UserPanelControl.ascx" TagName="UserPanelControl" TagPrefix="upc"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="App_Themes/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <div class="parent">
+     <div id="Header" class="header">
+            <asp:Panel ID="Panel1" runat="server" CssClass="LogiInPanel" >
+                <uc1:LogInControl runat="server" />
+            </asp:Panel>
+             
+        </div>
+        <div id="PicChild" class="picBackGround">
+                   <div style="position: absolute; float: left; height:35px; top: 5px; left: 309px; width: 307px; text-align:right;">
+                       <asp:Panel ID="Panel2" runat="server">
+                       
+                       <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="#754D1C" 
+                           ImageUrl="~/Image/forgetPassWord.png" NavigateUrl="~/ForgetPassWord.aspx">HyperLink</asp:HyperLink>
+&nbsp;&nbsp;
+                       
+                       <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/Image/Register.png" 
+                           ForeColor="#4E320D" NavigateUrl="~/RegisterNewUser.aspx">HyperLink</asp:HyperLink>
+       </asp:Panel>
+         </div>
+
+            
+            <div id="SiteName" class="nameOfSite">
+            </div>
+            <div id="aboutUs" style="background-position: center center; position: absolute;
+                float: left; height: 51px; width: 165px; left: 0px; top: 588px; background-image: url('/BanquethallVer6/Image/ButtonBackGround.png');
+                background-repeat: no-repeat;">
+                <asp:HyperLink ID="HyperLink3" runat="server" Font-Names="Tahoma" 
+                    Font-Underline="False" ForeColor="Maroon" NavigateUrl="~/Default.aspx" 
+                    
+                    style="position: absolute; float: left; height: 24px; width: 130px; left: 22px; top: 10px; font-size: large; background-image: url('/BanquethallVer6/Image/ButtonBackGround.png'); background-repeat: no-repeat; background-position: center; text-align: right;">صفحه اصلی</asp:HyperLink>
+            </div>
+            <div id="Div1" 
+                style="background-position: center center; position: absolute;
+                float: left; height: 51px; width: 116px; left: 0px; top: 666px; background-image: url('/BanquethallVer6/Image/ButtonCover.png'); background-repeat: no-repeat;">
+                <asp:HyperLink ID="HyperLink5" runat="server" 
+                    
+                    style="position: absolute; float: left; height: 28px; width: 100px; left: 10px; top: 7px; font-size: large; font-family: Tahoma; color: #FFFF66;" 
+                    NavigateUrl="~/halls.aspx" Width="300px">تالار ها</asp:HyperLink>
+            </div>
+            <div id="Div2" 
+                
+                
+                style="background-position: center center; position: absolute;
+                float: left; height: 51px; width: 116px; left: 0px; top: 725px; background-image: url('/BanquethallVer6/Image/ButtonCover.png'); background-repeat: no-repeat;">
+                <asp:HyperLink ID="HyperLink6" runat="server" 
+                    
+                    style="position: absolute; float: left; height: 28px; width: 100px; left: 10px; top: 7px; font-size: large; font-family: Tahoma; color: #FFFF66;" 
+                    NavigateUrl="~/foods.aspx">خوراک ها</asp:HyperLink>
+            </div>
+            <div id="ContactUs" style="background-position: center center; position: absolute;
+                float: left; height: 51px; width: 165px; left: 0px; top: 800px; background-image: url('/BanquethallVer6/Image/ButtonBackGround.png');
+                background-repeat: no-repeat;">
+                <asp:HyperLink ID="HyperLink4" runat="server" Font-Names="Tahoma" 
+                    Font-Underline="False" ForeColor="Maroon" NavigateUrl="~/ContactUs.aspx" 
+                    
+                    
+                    style="position: absolute; float: left; height: 24px; width: 130px; left: 22px; top: 10px; font-size: large; background-image: url('/BanquethallVer6/Image/ButtonBackGround.png'); background-repeat: no-repeat; background-position: center; text-align: right;">تماس با ما</asp:HyperLink>
+            </div>
+
+        </div>
+         <div id="Content" class="childContent">
+            <div style= "width:938px; float: left; height: 35px; text-align: right; font-size: large ; position: relative; padding-right:40px">
+            
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Tahoma" 
+                    Font-Size="0.8em" PathSeparator="&gt;&gt;" 
+                    style="font-size: medium; font-family: Tahoma; text-align: right">
+                    <CurrentNodeStyle ForeColor="White" />
+                    <NodeStyle Font-Bold="True" ForeColor="#FFFF99" />
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="White" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#FFCC00" />
+                </asp:SiteMapPath>
+            
+            </div>
+            <div style="position: relative; top: 0px; width:978px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+              </div>
+        </div> 
+    </div>
+    </form>
+</body>
+</html>
