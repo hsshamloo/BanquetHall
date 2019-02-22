@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BanquetDataBase" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\BanquetDataBase.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BanquetDataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AuthenticationTable" Member="AuthenticationTables">
+    <Type Name="AuthenticationTable">
+      <Column Name="UserId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="MembershipTable_AuthenticationTable" Member="MembershipTable" ThisKey="Email" OtherKey="Email" Type="MembershipTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodInfoTable" Member="FoodInfoTables">
+    <Type Name="FoodInfoTable">
+      <Column Name="FoodId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FoodName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="FoodType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="FoodInfoTable_FoodOrderTable" Member="FoodOrderTables" ThisKey="FoodId" OtherKey="FoodID" Type="FoodOrderTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImagesTable" Member="ImagesTables">
+    <Type Name="ImagesTable">
+      <Column Name="ImageId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectID" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageFile" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ImageHeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ImageWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="ReceptionsHallTable_ImagesTable" Member="ReceptionsHallTable" ThisKey="ObjectID" OtherKey="ReHallId1" Type="ReceptionsHallTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemInWareHouseInfoTable" Member="ItemInWareHouseInfoTables">
+    <Type Name="ItemInWareHouseInfoTable">
+      <Column Name="ItemId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfAvailable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatusOfItem" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="ItemInWareHouseInfoTable_ItemOrderInfoTable" Member="ItemOrderInfoTables" ThisKey="ItemId" OtherKey="ItemId" Type="ItemOrderInfoTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReservationTable" Member="ReservationTables">
+    <Type Name="ReservationTable">
+      <Column Name="ReservationId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReHallId" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ReserveDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfGuest" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeOfParty" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CostumerMessage" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CostumerName" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceOfReserv" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StatusOfReserve" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ReservationTable_FoodOrderTable" Member="FoodOrderTables" ThisKey="ReservationId" OtherKey="ReservationId" Type="FoodOrderTable" />
+      <Association Name="ReservationTable_BillTable" Member="BillTables" ThisKey="ReservationId" OtherKey="ReservationId" Type="BillTable" />
+      <Association Name="ReceptionsHallTable_ReservationTable" Member="ReceptionsHallTable" ThisKey="ReHallId" OtherKey="ReHallId1" Type="ReceptionsHallTable" IsForeignKey="true" />
+      <Association Name="MembershipTable_ReservationTable" Member="MembershipTable" ThisKey="Email" OtherKey="Email" Type="MembershipTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReceptionsHallTable" Member="ReceptionsHallTables">
+    <Type Name="ReceptionsHallTable">
+      <Column Name="ReHallId1" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReHallName" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="ReHallCapacity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReHallCostPerPerson" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ReHallCostFullCapacity" Type="System.Decimal" DbType="Money" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ReHallType" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FullDescription" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ReceptionsHallTable_ImagesTable" Member="ImagesTables" ThisKey="ReHallId1" OtherKey="ObjectID" Type="ImagesTable" />
+      <Association Name="ReceptionsHallTable_ReservationTable" Member="ReservationTables" ThisKey="ReHallId1" OtherKey="ReHallId" Type="ReservationTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MembershipTable" Member="MembershipTables">
+    <Type Name="MembershipTable">
+      <Column Name="Email" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TelphoneNumber" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RoleType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="RegisterDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="MembershipTable_AuthenticationTable" Member="AuthenticationTable" ThisKey="Email" OtherKey="Email" Type="AuthenticationTable" Cardinality="One" />
+      <Association Name="MembershipTable_ReservationTable" Member="ReservationTables" ThisKey="Email" OtherKey="Email" Type="ReservationTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodOrderTable" Member="FoodOrderTables">
+    <Type Name="FoodOrderTable">
+      <Column Name="FoodOrderID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="FoodID" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="FoodName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ReservationId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="StatusOfOrder" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="FoodInfoTable_FoodOrderTable" Member="FoodInfoTable" ThisKey="FoodID" OtherKey="FoodId" Type="FoodInfoTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ReservationTable_FoodOrderTable" Member="ReservationTable" ThisKey="ReservationId" OtherKey="ReservationId" Type="ReservationTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BillTable" Member="BillTables">
+    <Type Name="BillTable">
+      <Column Name="BillId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReserveCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FoodCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmountPaid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="RemainedAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="BillDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ClearanceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StatusOfBill" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ReservationId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="PayType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="ReservationTable_BillTable" Member="ReservationTable" ThisKey="ReservationId" OtherKey="ReservationId" Type="ReservationTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemOrderInfoTable" Member="ItemOrderInfoTables">
+    <Type Name="ItemOrderInfoTable">
+      <Column Name="ItemOrderID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="StatusOfOrder" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="FullPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Association Name="ItemInWareHouseInfoTable_ItemOrderInfoTable" Member="ItemInWareHouseInfoTable" ThisKey="ItemId" OtherKey="ItemId" Type="ItemInWareHouseInfoTable" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MessageTable" Member="MessageTables">
+    <Type Name="MessageTable">
+      <Column Name="MessageId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MessageSender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageReciver" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SendDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReplyDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MessageText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="StatusOfMessage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmailOfSender" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="EmailOfReciver" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

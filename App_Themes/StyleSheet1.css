@@ -1,0 +1,374 @@
+﻿body
+{
+}
+.MainPage
+{
+    height: 979px;
+    float: left;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 978px;
+}
+.MainPageTitle
+{
+    background-position: right center;
+    height: 105px;
+    float: right;
+    position: absolute;
+    top: 62px;
+    right: 51px;
+    width: 358px;
+    background-repeat: no-repeat;
+    text-align : right;
+}
+
+.MainPageContent
+{
+    height: 661px;
+    width: 834px;
+    top: 264px;
+    left: 72px;
+    float: left;
+    position: absolute;
+    text-align: right;
+    font-family: Tahoma;
+    color: #FFCC00;
+}
+.MainContentWithOutTitle
+{
+    position: absolute;
+    width: 834px;
+    height: 829px;
+    top: 96px;
+    left: 72px;
+}
+.HalfRightMainPageContent
+{
+    height: 661px;
+    width: 400px;
+    top: 0px;
+    right: 0px;
+    float: Right;
+    text-align: right;
+    position: relative;
+}
+.HalfLeftMainPageContent
+{
+    height: 661px;
+    font-family: Tahoma;
+    font-size: medium;
+    color: #ffcc33;
+    width: 434px;
+    float: left;
+    left: 0px;
+    position: relative;
+}
+.HalfLeftMainPageContentChildUp
+{
+    height: 350px;
+    font-family: Tahoma;
+    font-size: medium;
+    color: #ffcc33;
+    width: 434px;
+    float: left;
+    left: 0px;
+    position: relative;
+}
+.HalfLeftMainPageContentChildDown
+{
+    height: 311px;
+    width: 434px;
+    float: left;
+    left: 0px;
+    top: 0px;
+    position: relative;
+}
+.HalfleftMainPageContentChildDownChildMain
+{
+    position: relative;
+    float: left;
+    height: 40px;
+    width: 434px;
+    left: 0px;
+    top: 0px;
+}
+.HalfLeftMainPageContentChildDownChildLeft
+{
+    position: absolute;
+    float: left;
+    height: 38px;
+    width: 300px;
+    left: 0px;
+}
+.HalfLeftMainPageContentChildDownChildRight
+{
+    position: absolute;
+    float: right;
+    height: 38px;
+    width: 134px;
+    right: 0px;
+}
+div.HalfMainField
+{
+    top: 0px;
+    position: relative;
+    height: 40px;
+    width: 434px;
+    left: 0px;
+    float: right;
+}
+div.HalfMainLeft
+{
+    font-family: Tahoma;
+    font-size: small;
+    top: 0px;
+    position: relative;
+    height: 40px;
+    width: 400px;
+    left: 0px;
+    float: Left;
+}
+
+div.Parent
+{
+    font-family: Tahoma;
+    font-size: medium;
+    color: #ffcc33;
+    height: auto;
+    width: 834px;
+}
+div.fieldNormal
+{
+    top: 0px;
+    position: relative;
+    height: 40px;
+    width: 834px;
+    left: 0px;
+}
+div.LeftChild
+{
+    height: 30px;
+    width: 400px;
+    position: relative;
+    float: left;
+    top: 5px;
+    text-align: left;
+}
+.MiddelChild
+{
+    position: relative;
+    width: 275px;
+    height: 30px;
+    float: left;
+    text-align: right;
+    right: -17px;
+    top: 5px;
+    left: 5px;
+}
+Div.RightChild
+{
+    position: relative;
+    height: 30px;
+    width: 150px;
+    float: right;
+    top: 5px;
+    left: 0px;
+}
+
+
+.textBoxStyle
+{
+    height: 25px;
+    font-size: large;
+}
+Div.fieldBig
+{
+    position: relative;
+    height: 75px;
+    width: 834px;
+    text-align: right;
+}
+
+Div.LeftChildBig
+{
+    height: 65px;
+    width: 400px;
+    position: relative;
+    float: left;
+    top: 5px;
+}
+Div.MiddelChildBig
+{
+    position: relative;
+    width: 275px;
+    height: 65px;
+    float: left;
+    text-align: right;
+    right: 10px;
+    top: 5px;
+    left: 5px;
+}
+Div.RightChildBig
+{
+    position: relative;
+    height: 65px;
+    width: 150px;
+    float: right;
+    top: 5px;
+    text-align: left;
+}
+.erorMesaag
+{
+}
+
+.panelTegisterUser
+{
+    height: 661px;
+    width: 834px;
+    text-align: right;
+}
+
+
+
+/*-------------------------ShowHallUserControl-------*/
+Div.fieldBigExtrem
+{
+    position: relative;
+    top: 5px;
+    left: 15px;
+    text-align: right;
+    padding: 5px;
+    width: 790px;
+    overflow: auto;
+    height: 240px;
+    margin-bottom: 10px;
+}
+Div.RightChildExtrem
+{
+    position: relative;
+    height: 230px;
+    width: 315px;
+    float: right;
+    top: 5px;
+    border-bottom-width: thick;
+}
+
+Div.LeftChildBigExtrem
+{
+    height: 230px;
+    width: 315px;
+    position: relative;
+    float: left;
+    top: 5px;
+    border-bottom-width: thick;
+}
+.PersianText
+{
+    text-align: right;
+    
+    font-size: large;
+    font-family: Tahoma;
+}
+
+.titleHallDivPic
+{
+    width: 350px;
+    height: 250px;
+    top: 5px;
+    right: 0px;
+    position: absolute;
+    float: right;
+}
+.showTitleMainField
+{
+    height: 260px;
+    position: relative;
+}
+.showTitleRow
+{
+    position: relative;
+    top: 80px;
+    left: 5px;
+    width: 462px;
+    float: left;
+    height: 53px;
+}
+.showTitleRowLeftChild
+{
+    top: 11px;
+    left: 5px;
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 370px;
+    text-align: right;
+}
+.showTitleRowRightChild
+{
+    top: 11px;
+    right: 0px;
+    position: relative;
+    float: right;
+    height: 30px;
+    width: 75px;
+    text-align: left;
+}
+.persianClenderField
+{
+    top: 5px;
+    margin: 2px;
+    height: 30px;
+    float: right;
+    position: relative;
+    width: auto;
+}
+.panleForPage
+{
+    overflow: auto;
+}
+.OnefoodShowDiv
+{
+    position: relative;
+    width: 415px;
+    height: 35px;
+    float: right;
+    margin: 1px;
+    text-align: right;
+    font-family: Tahoma;
+    font-size: medium;
+    color: #ffcc33;
+}
+
+/*-------------FoodRegisterAndEdit--------*/
+.foodInformationHalfMainpageContent
+{
+    position: relative;
+    top: 5px;
+    height: 405px;
+    overflow: auto;
+    font-family: tahoma;
+    font-size : medium;
+    left: 0px;
+}
+.panelStyle
+{
+    top : 10px;
+    padding-right: 30px;
+    position: relative;
+    left: 0px;
+    height: 619px;
+    font-size: large;
+    text-align: right;
+    width: 827px;
+}
+.comboBoxPersian
+{
+    background-color: #FFFFCC;
+    text-align : right;
+   
+}
+.panelOfFoodReseverTime
+{
+    padding-right: 15px;
+}

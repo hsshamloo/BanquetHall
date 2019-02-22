@@ -1,0 +1,160 @@
+﻿/*-------MasterPAge------*/
+div.parent
+        {
+            width: 1600px;
+            height: 1050px;
+            margin: 0px auto 0px auto;
+            
+          
+        }
+        div.header
+        {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            height: 40px;
+            width: 1600px;
+            background-image: url('/BanquethallVer6/Image/HeaderShadow1.jpg');
+            text-align: right;
+            vertical-align: middle;
+            padding: 0px;
+            margin: 0px;
+        }
+        div.picBackGround
+        {
+            position: relative;
+            top: 0px;
+            right: 0px;
+            width: 622px;
+            height: 1009px;
+            float: right;
+            background-image: url('/BanquethallVer6/Image/HallBackGroundPic.jpg');
+        }
+        div.nameOfSite
+        {
+            position: absolute;
+            top: 96px;
+            left: 246px;
+            height: 168px;
+            width: 346px;
+            background-image: url('/BanquethallVer6/Image/SiteName.png');
+        }
+        div.childContent
+        {
+            background-position: right center;
+            position: relative;
+            top: 0px;
+            float: left;
+            left: 0px;
+            width: 978px;
+            height: 1009px;
+            background-color: #764F26;
+            background-image: url('/BanquethallVer6/Image/SideFolwer.png');
+            background-repeat: no-repeat;
+        }
+        .body
+        {
+            background-color: #624120;
+            overflow: auto;
+            margin: 0px;
+            padding: 0px;
+        }
+        Panel.LogiInPanel
+        {
+            position: relative;
+            float: right;
+            height: 40px;
+            width: 556px;
+            text-align: right;
+            margin: 0px;
+            padding: 0px;
+            top: 0px;
+        }
+
+/*-------MasterPAge------*/
+
+
+
+/*-------RegisterPage------*/
+body
+{
+}
+
+div.divparent
+{
+    width: 800px;
+    height: 600px;
+    font-family: Tahoma;
+    color: #FFFF66;
+}
+div.DivTextBox
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 600px;
+    top: 0px;
+    left: 0px;
+    
+    text-align: right;
+}
+div.DivErrorMesage
+{
+    position: absolute;
+    float: left;
+    height: 30px;
+    left: 0px;
+    width: auto;
+}
+div.FieldName
+{
+    position: relative;
+    float: right;
+    height: 30px;
+    width: 190px;
+    top: 0px;
+    left: 0px;
+    
+}
+div.GenderType
+{
+    position: relative;
+    height: 65px;
+    width: 500px;
+    float: left;
+    left: 0px;
+    text-align: right;
+    margin: 5px 0px 0px 0px;
+}
+control.gender
+{
+    text-align: right;
+    float: right;
+}
+
+control.genderName
+{
+    position: relative;
+    height: 65px;
+    width: 190px;
+    float: right;
+    right: 0px;
+    top: 0px;
+    margin: 5px 0px 0px 0px;
+}
+control.addressName
+{
+    position: relative;
+    height: 80px;
+    width: 190px;
+    float: right;
+    right: 0px;
+    top: 0px;
+    margin: 5px 0px 0px 0px;
+}
+
+/*-------RegisterPage------*/
+
+
+
+/*-------UserSeesion------*/
